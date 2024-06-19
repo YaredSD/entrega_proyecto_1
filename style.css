@@ -1,21 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --header-color: #f79931;
-    --nav-color: #EB6108;
+    --nav1-color: #f79931;
+    --nav2-color: #EB6108;
     --brown-top-color: #7D2F01;
     --author-color: #F7931D;
     --footer-color: #2E2E2E;
     --font-family: "Inter", sans-serif;
-    --border: 2px solid var(--blue-color);
-    --spacing: 28px;
   }
-
-
-* {
-    font-family: var(--font-family);
-}
-
-header {
-    background-color: var(--header-color);
-}
