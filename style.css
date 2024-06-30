@@ -8,6 +8,7 @@
     --brown-top-color: #7D2F01;
     --author-color: #F7931D;
     --footer-color: #2E2E2E;
+    --footer-text-color: #CDC9E0;
     --font-family: "Inter", sans-serif;
   }
 
@@ -24,7 +25,7 @@
     text-decoration: none;
   }
 
-/* HEADER 1*/
+/* HEADER*/
 
  header > .nav1 {
     background-color: var(--nav1-color);
@@ -102,8 +103,6 @@
     align-self: center;
   }
 
-  /* HEADER 2*/
-
   header > .nav2 {
     background-color: var(--nav2-color);
     display: grid;
@@ -141,7 +140,7 @@ header > nav > ul > li > a > img {
   align-items: center;
 }
 
-/*MAIN 1*/
+/*MAIN*/
 
 main {
   display: grid;
@@ -177,7 +176,7 @@ main {
 }
 
 #topics > ul {
-  grid-row: 3/4;
+  grid-row: 2/3;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -186,105 +185,185 @@ main {
 }
 
 #books {
-  grid-row: 3/6;
+  grid-row: 3/4;
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 60px 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #books > h2 {
-  grid-row: 1;
+  grid-row: 3/4;
+  color: var(--footer-color);
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 20px;
 }
 
 #books > ul {
-  grid-row: 2/3;
+  grid-row: 4/5;
+  grid-column: 1/6;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px;
+  justify-content: center;
 }
 
-/*
- <main>
-        </section>
-        <section id="books">
-            <h2>LOS MÁS VENDIDOS</h2>
-            <ul class="top-seller">
-                <li>
-                    <img src="/assets/books/ACOTAR.jpeg" alt="Una Corte de Rosas y Espinas" title="Una Corte de Rosas y Espinas">
-                    <p>UNA CORTE DE ROSAS Y ESPINAS</p>
-                    <h4>16,95€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/ANHELO.jpeg" alt="Anhelo" title="Anhelo">
-                    <p>ANHELO</p>
-                    <h4>18,24€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/GOT.jpeg" alt="Juego de Tronos - Fuego y Sangre" title="Juego de Tronos - Fuego y Sangre">
-                    <p>JUEGO DE TRONOS - FUEGO Y SANGRE</p>
-                    <h4>17,00€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/HP.jpeg" alt="Harry Potter y la Piedra Filosofal" title="Harry Potter y la Piedra Filosofal">
-                    <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
-                    <h4>19,99€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/JUJUTSU-KAISEN.jpeg" alt="Jujutsu Kaisen Vol. II" title="Jujutsu Kaisen Vol. II">
-                    <p>JUJUTSU KAISEN VOL. II</p>
-                    <h4>8,65€/h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/LOR.jpeg" alt="El Señor de los Anillos - La Comunidad del Anillo" title="El Señor de los Anillos - La Comunidad del Anillo">
-                    <p>EL SEÑOR DE LOS ANILLOS - LA COMUNIDAD DEL ANILLO</p>
-                    <h4>13,49€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/SINSAJO.jpeg" alt="Los Juegos del Hambre - Sinsajo" title="Los Juegos del Hambre - Sinsajo">
-                    <p>LOS JUEGOS DEL HAMBRE - SINSAJO</p>
-                    <h4>19,18€</h4>
-                    <button>Comprar</button>
-                </li>
-                <li>
-                    <img src="/assets/books/WA.jpeg" alt="Asesino de Brujas - Los Hijos del Rey" title="Asesino de Brujas - Los Hijos del Rey">
-                    <p>ASESINO DE BRUJAS - LOS HIJOS DEL REY</p>
-                    <h4>21,15€</h4>
-                    <button>Comprar</button>
-                </li>
-            </ul>
-        </section>
-        <div class="message">
-            <p>En <strong>El Libro Técnico - La Casa del Lector</strong> ¡Celebramos 60 años de pasión por los libros!</p>
-            <p>Somos tu librería en las palmas con <strong>ADN 100% canario.</strong>A lo largo de seis décadas, no solo te hemos acercado a la lectura, sino también todo lo que le rodea; papelería, libros especializados y unos vendedores que te ayudarán y aconsejarán en lo que necesites.</p>
-            <p>Gracias por ser parte de nuestra historia</p>
-        </div>
-        <section class="advice">
-            <h2>¿POR QUÉ COMPRAR EN EL LIBRO TÉCNICO?</h2>
-            <ul>
-                <li>
-                    <img src="/assets/advices/protection.png" alt="Compra segura">
-                    <p>Compra segura</p>
-                </li>
-                <li>
-                    <img src="/assets/advices/free-shop.png" alt="Recogida gratis en tienda">
-                    <p>Recogida gratis en tienda</p>
-                </li>
-                <li>
-                    <img src="/assets/advices/shipping.png" alt="Envíos a Canarias y Península">
-                    <p>Envíos a Canarias y Península</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        
-    </footer>
-</body>
-</html>
+#books > ul > li > img {
+  height: 400px;
+}
 
+#books > ul > li > p {
+  font-family: var(--font-family);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#books > ul > li > h4 {
+  margin-bottom: 5px;
+}
+
+#books > ul > li > button {
+  padding: 10px;
+  border-radius: 10px;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--nav1-color);
+  color: white;
+  font-weight: bolder;
+}
+
+main > div {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: var(--nav2-color);
+}
+
+.advice {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.advice > h2 {
+  color: var(--footer-color);
+}
+
+.advice > ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--footer-color);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.footer-1 > img {
+  height: 70px;
+  width: auto;
+}
+
+.footer-1 > ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding-top: 15px;
+}
+
+.footer-1 > ul > li > a > img {
+  height: 20px;
+  width: 20px;
+}
+
+.footer-2 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: var(--footer-text-color);
+  justify-content: flex-start;
+}
+
+.footer-2 > h4 {
+  color: var(--nav1-color);
+  margin-bottom: 15px;
+}
+.footer-2 > ul {
+  list-style: none;
+}
+
+.footer-3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: var(--footer-text-color);
+}
+
+.footer-3 > h4 {
+  color: var(--nav1-color);
+  margin-bottom: 15px;
+}
+
+.footer-3 > ul {
+  list-style: none;
+}
+
+.footer-3 > ul > li > a > p {
+  color: var(--footer-text-color);
+}
+
+.footer-4 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: var(--nav1-color);
+  gap: 5px;
+}
+
+.footer-4 > ul {
+  list-style: none;
+}
+
+.footer-4 > ul > li > p {
+  color: var(--footer-text-color);
+}
+
+.footer-4 > ul > li > img {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-5 {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(31, 28, 28);
+  color: var(--nav2-color);
+  padding: 5px;
+}
