@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /*VARIABLES*/
+
 :root {
     --nav1-color: #f79931;
     --nav2-color: #EB6108;
@@ -9,7 +10,9 @@
     --footer-color: #2E2E2E;
     --font-family: "Inter", sans-serif;
   }
+
 /*CRITERIOS COMUNES*/
+
   * {
     padding: 0;
     margin: 0;
@@ -21,7 +24,7 @@
     text-decoration: none;
   }
 
-/* HEADER PARTE 1 */
+/* HEADER 1*/
 
  header > .nav1 {
     background-color: var(--nav1-color);
@@ -68,11 +71,9 @@
   }
 
   .nav1 > .account {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
-    justify-self: start;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
   }
 
   .nav1 > div > a > img {
@@ -91,39 +92,199 @@
     font-weight: 300;
   }
 
-  /* HEADER PARTE 2 */
+  .nav1 > .cart {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+  }
 
-  /*<div class="account">
-                <a href="https://www.ellibrotecnico.com/registro/autenticacion.php">
-                    <img src="/assets/profile.png" alt="profile">
-                    <h2>MI CUENTA</h2>
-                    <h3>Iniciar sesión</h3>
-                </a>
-            </div>
-            <div class="cart">
-                <a href="https://www.ellibrotecnico.com/index.php?notifINFO=1197">
-                    <img src="/assets/cart.png" alt="cart">
-                    <h2>MI COMPRA</h2>
-                    <h3>Total: 0€</h3>*/
+  /* HEADER 2*/
 
+  header > .nav2 {
+    background-color: var(--nav2-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    gap: 5px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    justify-content: space-around;
+    padding: 8px;
+  }
 
+header > nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
 
+header > nav > ul > li > a {
+  color: white;
+}
 
-   /* <nav class="second-nav">
-        <ul class="nav-list">
-            <li><a href="Inicio.html">INICIO</a></li>
-            <li><a href="Libros.html">LIBROS</a></li>
-            <li><a href="Papeleria.html">PAPELERIA</a></li>
-            <li><a href="Libros_vendidos.html">LIBROS MÁS VENDIDOS</a></li>
-            <li><a href="Pedidos_especiales.html">PEDIDOS ESPECIALES</a></li>
-            <li><a href="Mis_pedidos.html">MIS PEDIDOS</a></li>
-            <li><a href="Noticias.html">NOTICIAS</a></li>
-        </ul>
-        <ul class="nav-social">
-            <li><a href="https://www.facebook.com/librotecnico"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png"></a></li>
-            <li><a href="https://x.com/ellibrotecnico"><img src="https://static.vecteezy.com/system/resources/previews/034/716/140/non_2x/x-new-twitter-logo-free-png.png"></a></li>
-            <li><a href="https://www.instagram.com/ellibrotecnico/"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png"></a></li>
-            <li><a href="https://www.youtube.com/channel/UCmd8o8QjreIDjdBAV7A314w"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png"></a></li>
-        </ul>
-    </nav>
-</header>*/
+header > nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+header > nav > ul > li > a > img {
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*MAIN 1*/
+
+main {
+  display: grid;
+  grid-template-areas: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  align-content: start;
+}
+
+#announce {
+  grid-row: 1/2;
+  padding-top: 30px;
+}
+
+#topics {
+  grid-row: 2/3;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+#topics > h2 {
+  grid-row: 2/3;
+  color: var(--footer-color);
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+#topics > ul {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+#books {
+  grid-row: 3/6;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr 1fr 1fr 1fr;
+}
+
+#books > h2 {
+  grid-row: 1;
+}
+
+#books > ul {
+  grid-row: 2/3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+ <main>
+        </section>
+        <section id="books">
+            <h2>LOS MÁS VENDIDOS</h2>
+            <ul class="top-seller">
+                <li>
+                    <img src="/assets/books/ACOTAR.jpeg" alt="Una Corte de Rosas y Espinas" title="Una Corte de Rosas y Espinas">
+                    <p>UNA CORTE DE ROSAS Y ESPINAS</p>
+                    <h4>16,95€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/ANHELO.jpeg" alt="Anhelo" title="Anhelo">
+                    <p>ANHELO</p>
+                    <h4>18,24€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/GOT.jpeg" alt="Juego de Tronos - Fuego y Sangre" title="Juego de Tronos - Fuego y Sangre">
+                    <p>JUEGO DE TRONOS - FUEGO Y SANGRE</p>
+                    <h4>17,00€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/HP.jpeg" alt="Harry Potter y la Piedra Filosofal" title="Harry Potter y la Piedra Filosofal">
+                    <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+                    <h4>19,99€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/JUJUTSU-KAISEN.jpeg" alt="Jujutsu Kaisen Vol. II" title="Jujutsu Kaisen Vol. II">
+                    <p>JUJUTSU KAISEN VOL. II</p>
+                    <h4>8,65€/h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/LOR.jpeg" alt="El Señor de los Anillos - La Comunidad del Anillo" title="El Señor de los Anillos - La Comunidad del Anillo">
+                    <p>EL SEÑOR DE LOS ANILLOS - LA COMUNIDAD DEL ANILLO</p>
+                    <h4>13,49€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/SINSAJO.jpeg" alt="Los Juegos del Hambre - Sinsajo" title="Los Juegos del Hambre - Sinsajo">
+                    <p>LOS JUEGOS DEL HAMBRE - SINSAJO</p>
+                    <h4>19,18€</h4>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="/assets/books/WA.jpeg" alt="Asesino de Brujas - Los Hijos del Rey" title="Asesino de Brujas - Los Hijos del Rey">
+                    <p>ASESINO DE BRUJAS - LOS HIJOS DEL REY</p>
+                    <h4>21,15€</h4>
+                    <button>Comprar</button>
+                </li>
+            </ul>
+        </section>
+        <div class="message">
+            <p>En <strong>El Libro Técnico - La Casa del Lector</strong> ¡Celebramos 60 años de pasión por los libros!</p>
+            <p>Somos tu librería en las palmas con <strong>ADN 100% canario.</strong>A lo largo de seis décadas, no solo te hemos acercado a la lectura, sino también todo lo que le rodea; papelería, libros especializados y unos vendedores que te ayudarán y aconsejarán en lo que necesites.</p>
+            <p>Gracias por ser parte de nuestra historia</p>
+        </div>
+        <section class="advice">
+            <h2>¿POR QUÉ COMPRAR EN EL LIBRO TÉCNICO?</h2>
+            <ul>
+                <li>
+                    <img src="/assets/advices/protection.png" alt="Compra segura">
+                    <p>Compra segura</p>
+                </li>
+                <li>
+                    <img src="/assets/advices/free-shop.png" alt="Recogida gratis en tienda">
+                    <p>Recogida gratis en tienda</p>
+                </li>
+                <li>
+                    <img src="/assets/advices/shipping.png" alt="Envíos a Canarias y Península">
+                    <p>Envíos a Canarias y Península</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
+
