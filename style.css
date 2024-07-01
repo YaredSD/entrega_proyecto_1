@@ -140,6 +140,10 @@ header > nav > ul > li > a > img {
   align-items: center;
 }
 
+header > nav > img {
+  display: none;
+}
+
 /*MAIN*/
 
 main {
@@ -366,4 +370,109 @@ footer {
   background-color: rgb(31, 28, 28);
   color: var(--nav2-color);
   padding: 5px;
+}
+
+/*AHORA LO HAREMOS RESPONSIVE*/
+
+@media screen and (max-width: 1150px) {
+
+  main > section > img {
+    width: 75%;
+  }
+  
+ main > section > ul > li > a > img{
+    height: 190px;
+  }
+
+main > div {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.advice {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.advice > ul {
+  width: 60%;
+  gap: 0px;
+}
+}
+
+@media screen and (max-width: 860px) {
+  
+  header > .nav1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px,auto));
+  }
+
+  header > .nav1 {
+    gap: 5px;
+  }
+
+  header > .nav1 > .searcher > input {
+    min-width: none;
+    width: 100%;
+  }
+
+  .nav1 > div > a > h2 {
+    display: none;
+  }
+
+  .nav1 > div > a > h3 {
+    display: none;
+  }
+
+  .nav1 > div > a > img {
+    display: flex;
+    gap: 0px;
+    justify-content: space-around;
+  }
+
+  header > .nav2 {
+  display: none;
+  }
+
+  header > nav > img {
+    display: block;
+    height: 50px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #topics {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  #topics > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .advice > ul {
+    width: 100%;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-1 > img {
+    width: 50%;
+  }
+
 }
